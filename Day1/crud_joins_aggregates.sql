@@ -117,11 +117,11 @@ UPDATE "User"
 SET PhoneNumber = '9876543210'
 WHERE Id = 1;
 
--- DELETE a mission application
+
 DELETE FROM MissionApplication
 WHERE Id = 1;
 
--- SELECT all users
+
 SELECT * FROM "User";
 
 
@@ -148,4 +148,3 @@ SELECT m.MissionTitle, COUNT(ma.Id) AS ApplicationCount
 FROM Missions m
 LEFT JOIN MissionApplication ma ON m.Id = ma.MissionId
 GROUP BY m.MissionTitle;
-
